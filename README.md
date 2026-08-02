@@ -1,32 +1,55 @@
-# React + TypeScript + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Приложение для просмотра текущей погоды в любом городе мира. Написано в процессе изучения React + TypeScript.
 
-Currently, two official plugins are available:
+## Демо
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 [Открыть приложение](https://weather-app-two-delta-72.vercel.app)
 
-## React Compiler
+## Функциональность
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Поиск погоды по названию города
+- Отображение температуры, влажности и описания погоды
+- Обработка ошибок (город не найден, проблемы с сетью)
+- Индикатор загрузки при запросе к API
 
-## Expanding the Oxlint configuration
+## Технологии
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React 18
+- TypeScript
+- Vite
+- OpenWeatherMap API
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Установка и запуск локально
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+\`\`\`bash
+git clone https://github.com/Artyom-Tyshchenko/weather-app.git
+cd weather-app
+npm install
+\`\`\`
+
+Создай файл `.env` в корне проекта и добавь свой API-ключ с [openweathermap.org](https://openweathermap.org/):
+
+\`\`\`
+VITE_WEATHER_API_KEY=твой_ключ
+\`\`\`
+
+Запусти проект:
+
+\`\`\`bash
+npm run dev
+\`\`\`
+
+## Структура проекта
+
+\`\`\`
+src/
+├── components/
+│   ├── SearchBar.tsx
+│   ├── WeatherCard.tsx
+│   └── ErrorMessage.tsx
+├── types/
+│   └── weather.ts
+├── App.tsx
+└── main.tsx
+\`\`\`
