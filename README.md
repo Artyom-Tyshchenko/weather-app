@@ -22,34 +22,26 @@
 
 ## Установка и запуск локально
 
-\`\`\`bash
 git clone https://github.com/Artyom-Tyshchenko/weather-app.git
 cd weather-app
 npm install
-\`\`\`
 
 Создай файл `.env` в корне проекта и добавь свой API-ключ с [openweathermap.org](https://openweathermap.org/):
 
-\`\`\`
 VITE_WEATHER_API_KEY=твой_ключ
-\`\`\`
 
 Запусти проект:
 
-\`\`\`bash
 npm run dev
-\`\`\`
 
 ## Структура проекта
 
-\`\`\`
 src/
 ├── components/
-│   ├── SearchBar.tsx
-│   ├── WeatherCard.tsx
-│   └── ErrorMessage.tsx
+│ ├── SearchBar.tsx
+│ ├── WeatherCard.tsx
+│ └── ErrorMessage.tsx
 ├── types/
-│   └── weather.ts
+│ └── weather.ts
 ├── App.tsx
 └── main.tsx
-\`\`\`
